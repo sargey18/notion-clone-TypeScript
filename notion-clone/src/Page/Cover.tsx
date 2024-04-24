@@ -19,7 +19,7 @@ export const Cover = () => {
     return (
         <div className={styles.cover}>
             <img src="/ztm-notes.png" alt="Cover" className={styles.image}/>
-            <button className='styles.button' onClick={onChangeCoverImage}>Change cover</button>
+            <button className={styles.button} onClick={onChangeCoverImage}>Change cover</button>
             <input onChange={onCoverImageupload} style={{display: "none"}} ref={fileInputRef} type='file'/>
         </div>
     )
