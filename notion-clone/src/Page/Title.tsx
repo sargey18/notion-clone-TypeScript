@@ -6,7 +6,7 @@ import {nanoid} from "nanoid"
 type TitleProps = {
     title: string;
     changePageTitle(title: string): void;
-    addNode(node: Node, index:number): void;
+    addNode(node: NodeData, index:number): void;
 }
 
 export const Title = ({title, changePageTitle, addNode}: TitleProps) => {

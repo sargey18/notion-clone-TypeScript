@@ -1,5 +1,5 @@
 import {NodeData} from "../utils/types"
-import styles from ".Node.module.css"
+import styles from "./Node.module.css"
 import {useRef, useEffect, FormEventHandler, KeyboardEventHandler} from "react"
 import {nanoid} from "nanoid"
 

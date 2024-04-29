@@ -12,9 +12,7 @@ import {nanoid} from "nanoid"
 export const Page = () => {
     const [nodes, setNodes] = useState<NodeData[]>([])
     const [title, setTitle] = useState("Default Title")
-    const [useFocusedNodeIndex, setFocusedNodeIndex] = useFocusedNodeIndex({
-        nodes
-    })
+    const [focusedNodeIndex, setFocusedNodeIndex] = useFocusedNodeIndex({nodes})
 
     const addNode = (node: NodeData, index: number) => {
         const newNodes = [...nodes]
@@ -50,15 +48,16 @@ export const Page = () => {
                         index={index}
                         addNode={addNode}
                         removeNodeByIndex={removeNodeByIndex}
-                        changeNodeValue={changeNodeValue} />
+                        changeNodeValue={changeNodeValue} 
                     />
                 ))}
                 <Spacer
-                handleClick={(node, index) => {
-                    addNode(node, index + 1)
+                handleClick={() => {
+                    addNode({type: "text", value: "", id: nanoid()}, nodes.length)
                 }}
                 showHint={!nodes.length}
                 />
+
             </div>
         
         </>
