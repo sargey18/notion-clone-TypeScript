@@ -48,6 +48,7 @@ export const usePageState = (initialState: Page) => {
         addNode,
         removeNodeByIndex,
         changeNodeValue,
+        changeNodeType,
         setTitle,
         setCoverImage,
         setNodes
