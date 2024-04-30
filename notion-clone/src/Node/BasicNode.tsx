@@ -10,8 +10,6 @@ type BasicNodeProps = {
     updateFocusedIndex(index: number): void;
     isFocused: boolean;
     index: number;
-
-
 }
 
 export const BasicNode = ({
